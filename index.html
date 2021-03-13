@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <audio  id="myAudio" src="music.mp3"></audio>
+<body>
+    <div id="div_maior">
+        <div id="div">
+            <a onClick="togglePlay(), pulse(), color()">
+                <div class="div2">
+                    <i id="icone" class="fas fa-music"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <audio src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto">
+    </audio>
+</body> 
+    <script>
+        var myAudio = document.getElementById("myAudio");
+        var bombar = document.getElementById("div");
+        var icone = document.getElementById("icone");
+            
+        function togglePlay() {
+            return myAudio.paused ? myAudio.play() : myAudio.pause();
+        };
+        
+        function pulse() {
+            bombar.classList.add("bom");
+        }
+        
+        function color() {
+            icone.classList.add("cor");
+        }
+    </script>
+</html>
